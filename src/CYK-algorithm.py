@@ -28,7 +28,7 @@ def CYK(w: str, lang: dict):
     n = len(w) 
     m = len(lang)
     dp = np.zeros((m, n, n))
-    id = zip([i for i in range(m)], lang)
+    id = dict(zip([i for i in range(m)], lang))
     rule = []
     i = 1
     for var in lang:
@@ -53,7 +53,7 @@ def CYK(w: str, lang: dict):
         return -1
     else:
         lines = w.split('\n')
-        idLines = zip([i for i in range(len(w)) if w[i]=='\n'], [i for i in range(len(lines))])
+        idLines = dict(zip([i for i in range(len(w)) if w[i]=='\n'], [i for i in range(len(lines))]))
         ret = 1
         for i in range(n-1, -1, -1):
             if(dp[i][0][0]):
