@@ -1,2 +1,2 @@
-X = 123"asdasd""asdasd"
+X = "123.1231'23_123"'
 print(X)
