@@ -29,6 +29,16 @@ def read(filepath: str):
                 if(tmp[0:3]=="\'\'\'"):
                     res += 's'
                     w = tmp[4:]
+        elif(w[0:3]=="\"\"\""):
+            tmp = w[4:]
+            while(tmp):
+                if(tmp[0:3]=="\"\"\""):
+                    break
+                tmp = tmp[1:]
+            if(tmp):
+                if(tmp[0:3]=="\"\"\""):
+                    res += 's'
+                    w = tmp[4:]
         elif(w[0]=='\"'):
             tmp = w[1:]
             while(tmp):
@@ -181,13 +191,4 @@ def read(filepath: str):
         tmp = w
         w = w[1:]
     return res.replace(" ", "")
-
-
-
-
-# w = "\'\'\'asdjaskld\'\'\'"
-
-# print(res)
-    
-
 

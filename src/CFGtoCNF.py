@@ -1,8 +1,5 @@
 from copy import deepcopy
 import string
-# from grammarreader import readGrammar
-# from filereader import read
-# from CYKalgorithm import CYK
 
 def isVariable(word):
     if len(word) == 1:
@@ -70,11 +67,3 @@ def display(grammar : dict):
                 print(grammar[var][i])
             else:
                 print(grammar[var][i],"|",end=" ")
-
-# inp = read("src/tes.py")
-# #print(inp)
-# CFG = readGrammar('src/grammar/grammar.txt')
-# CNF = CFGtoCNF(CFG)
-# # display(CNF)
-# print(CYK(inp, CNF))
-# # display(CNF)
