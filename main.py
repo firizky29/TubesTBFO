@@ -16,12 +16,11 @@ def displaycode(filepath) :
     with open(filepath, 'r') as f:
         lines = f.readlines()
     idx = 1
-    x = len(str(idx))
+    x = len(str(idx))+1
     for line in lines:
-        print("   " + str(idx), end="")
-        for i in range(x-len(str(idx))+1):
+        for i in range(x-len(str(idx))):
             print(end=" ")
-        print("|  " + line, end="")
+        print("   " + str(idx) + " |  " + line, end="")
         idx+=1
 
 if __name__ == "__main__":
