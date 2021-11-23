@@ -71,10 +71,10 @@ def display(grammar : dict):
             else:
                 print(grammar[var][i],"|",end=" ")
 
-inp = read("src/tes.py")
-#print(inp)
-CFG = readGrammar('src/grammar/grammar.txt')
-CNF = CFGtoCNF(CFG)
-# display(CNF)
-print(CYK(inp, CNF))
-# display(CNF)
+# inp = read("src/tes.py")
+# #print(inp)
+# CFG = readGrammar('src/grammar/grammar.txt')
+# CNF = CFGtoCNF(CFG)
+# # display(CNF)
+# print(CYK(inp, CNF))
+# # display(CNF)

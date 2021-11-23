@@ -9,12 +9,8 @@ def enumAtoms():
 
 
 def read(filepath: str):
-    try:
-        with open(filepath, 'r') as f:
-            w = f.read()
-    except Exception as e:
-        print("Caught exception: cannot open file <--- bakal di ganti")
-        return
+    f = open(filepath, 'r')
+    w = f.read()
     alp = string.ascii_lowercase
     Alp = string.ascii_uppercase
     num = string.digits
