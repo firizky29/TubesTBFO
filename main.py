@@ -8,7 +8,21 @@ def readLine(filepath, line) :
     lines = []
     with open(filepath, 'r') as f:
         lines = f.readlines()
-    return str(line+2)+ ". " + lines[line+1]
+    lines[len(lines)-1] = lines[len(lines)-1] + "\n"
+    return str(line+1)+ " | " + lines[line]
+
+def displaycode(filepath) :
+    lines = []
+    with open(filepath, 'r') as f:
+        lines = f.readlines()
+    idx = 1
+    x = len(str(idx))
+    for line in lines:
+        print("   " + str(idx), end="")
+        for i in range(x-len(str(idx))+1):
+            print(end=" ")
+        print("|  " + line, end="")
+        idx+=1
 
 if __name__ == "__main__":
     print("===============================================================")
@@ -31,22 +45,22 @@ if __name__ == "__main__":
         print(">> Membuka file src/tes.py ...")
         fileinput = "src/tes.py"
         inp = read(fileinput)
-        exit
+    
+    print("\n>> Source Code")
 
-    print()
+    displaycode(fileinput)
+
+    print("\n")
     print(">> Evaluating " + str(fileinput) + "...")
     print()
 
     x = CYK(inp, CNF)
-    
     print(">> Hasil Evaluate")
-    print()
 
     if x == -1 :
-        print("Accepted")
+        print("   Accepted")
         print()
     else :
-        print("Syntax Error")
-        print()
-        print(readLine(fileinput, x))
+        print("   Syntax Error")
+        print("   " + readLine(fileinput, x))
     print("===============================================================")

@@ -25,6 +25,7 @@ else
 import numpy as np
 
 def CYK(w: str, lang: dict):
+    w = w + "\n"
     n = len(w) 
     m = len(lang)
     dp = np.zeros((n+1, n+1, m+1))
