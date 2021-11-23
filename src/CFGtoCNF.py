@@ -1,6 +1,6 @@
 from copy import deepcopy
 import string
-from grammar-reader import readGrammar
+from grammarreader import readGrammar
 
 def isVariable(word):
     if len(word) == 1:
@@ -69,6 +69,6 @@ def display(grammar : dict):
             else:
                 print(grammar[var][i],"|",end=" ")
 
-CFG = readGrammar('grammar.txt')
+CFG = readGrammar('src/grammar/grammar.txt')
 CNF = CFGtoCNF(CFG)
 display(CNF)
