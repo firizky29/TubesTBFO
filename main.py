@@ -1,5 +1,4 @@
 import sys
-import os
 from src.CFGtoCNF import CFGtoCNF
 from src.CYKalgorithm import CYK
 from src.grammarreader import readGrammar
@@ -9,24 +8,13 @@ def readLine(filepath, line) :
     lines = []
     with open(filepath, 'r') as f:
         lines = f.readlines()
-    return str(line+1)+ ". " + lines[line]
-
-def find_files(filename, search_path):
-    # Walking top-down from the root
-    for root, dir, files in os.walk(search_path):
-        if filename in files:
-            result = os.path.join(root, filename)
-    return result
+    return str(line+2)+ ". " + lines[line+1]
 
 if __name__ == "__main__":
     print("===============================================================")
     print("                    PYTHON SYNTAX EVALUATOR")
     print("                  Made by : Kelompok 5 Kelas 2")
     print("===============================================================")
-
-    # grammar = find_files("grammar.txt", os.getcwd())
-    # tes = find_files("tes.py", os.getcwd())
-    # workdir = os.getcwd()
 
     CFG = readGrammar("src/grammar/grammar.txt")
     CNF = CFGtoCNF(CFG)
