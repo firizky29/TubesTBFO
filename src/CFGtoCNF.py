@@ -1,8 +1,8 @@
 from copy import deepcopy
 import string
-from grammarreader import readGrammar
-from filereader import read
-from CYKalgorithm import CYK
+# from grammarreader import readGrammar
+# from filereader import read
+# from CYKalgorithm import CYK
 
 def isVariable(word):
     if len(word) == 1:

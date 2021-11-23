@@ -1,9 +1,9 @@
 import sys
 import os
-from CFGtoCNF import CFGtoCNF
-from CYKalgorithm import CYK
-from grammarreader import readGrammar
-from filereader import read
+from src.CFGtoCNF import CFGtoCNF
+from src.CYKalgorithm import CYK
+from src.grammarreader import readGrammar
+from src.filereader import read
 
 def readLine(filepath, line) :
     lines = []
@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     # grammar = find_files("grammar.txt", os.getcwd())
     # tes = find_files("tes.py", os.getcwd())
-    workdir = os.getcwd()
+    # workdir = os.getcwd()
 
     CFG = readGrammar("src/grammar/grammar.txt")
     CNF = CFGtoCNF(CFG)
@@ -38,6 +38,7 @@ if __name__ == "__main__":
     try:
         inp = read(fileinput)
     except Exception:
+        print()
         print(">> File " + str(fileinput) + " tidak dapat dibuka!")
         print(">> Membuka file src/tes.py ...")
         fileinput = "src/tes.py"
