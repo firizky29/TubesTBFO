@@ -67,6 +67,7 @@ def read(filepath: str):
             while(w):
                 if(w[0]=='/n'):
                     break
+                w = w[1:]
             if(not w):
                 break
         elif(w[0] not in (alp+Alp+num+'_')):
@@ -128,6 +129,7 @@ def read(filepath: str):
                         w = tmp
                         res += 'x'
                     else:
+                        w = tmp
                         res += 'n'
                 elif(w[0]=='.'):
                     tmp = w
@@ -183,6 +185,7 @@ def read(filepath: str):
         tmp = w
         w = w[1:]
     return res
+
 
 
 

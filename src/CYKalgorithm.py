@@ -36,7 +36,14 @@ def CYK(w: str, lang: dict):
     for i in range(1,n+1):
         for j in range(1,m+1):
             for term in rule[j]:
-                if(term[0]==w[i-1]):
+                # print(term)
+                if(term[0]=='__or__'):
+                    tmp = '|'
+                elif(term[0]=='__nl__'):
+                    tmp = '\n'
+                else:
+                    tmp = term[0]
+                if(tmp==w[i-1]):
                     dp[1][i][j] = True
                     break
                 

@@ -12,7 +12,7 @@ def readGrammar(filepath: str):
     prod = []
     for line in lines:
         terms = line[1].split('|')
-        terms = [(((term.replace("or", "|")).replace("nl", "\n")).replace("sp", " ")).split() for term in terms]
+        terms = [term.split() for term in terms]
         prod.append(terms)
     return dict(zip(var, prod))
 
