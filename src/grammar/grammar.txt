@@ -101,7 +101,7 @@ DEF_STATEMENT -> DEF
 
 
 
-ASSIGNMENT_OP -> + = | - = | * = | @ = | / = | % = | & = | OR_OP = | ^ = | < < = | > > = | * * = | / / =
+ASSIGNMENT_OP -> + = | - = | * = | @ = | / = | % = | & = | OR_OP = | ^ = | < < = | > > = | * * = | / / = | =
 SPECIAL_ASSIGNMENT -> : =
 UNARY_OP -> PLUS | MINUS | TILDE
 BINARY_OP -> * | / | / / | % | @ | * *

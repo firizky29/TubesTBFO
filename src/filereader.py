@@ -184,7 +184,7 @@ def read(filepath: str):
                         w = tmp
         tmp = w
         w = w[1:]
-    return res
+    return res.replace(" ", "")
 
 
 
