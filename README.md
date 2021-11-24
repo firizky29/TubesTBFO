@@ -28,4 +28,4 @@ Roby Purnomo 13520106
 # Cara Menjalankan
 1. Clone repository https://github.com/firizky29/TubesTBFO
 2. Buka cmd dan change directory ke TubesTBFO/
-3. Jalankan python main.py 'test/tes.py' (untuk file tes)
+3. Jalankan python main.py "test/tes.py" (untuk file tes)
