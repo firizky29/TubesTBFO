@@ -33,7 +33,7 @@ if __name__ == "__main__":
     CNF = CFGtoCNF(CFG)
 
     if (len(sys.argv) < 2):
-        fileinput = "src/tes.py"
+        fileinput = "test/tes.py"
     else:
         fileinput = sys.argv[1]
     try:
@@ -41,8 +41,8 @@ if __name__ == "__main__":
     except Exception:
         print()
         print(">> File " + str(fileinput) + " tidak dapat dibuka!")
-        print(">> Membuka file src/tes.py ...")
-        fileinput = "src/tes.py"
+        print(">> Membuka file test/tes.py ...")
+        fileinput = "test/tes.py"
         inp = read(fileinput)
     
     print("\n>> Source Code")
