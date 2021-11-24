@@ -1,12 +1,12 @@
-## TubesTBFO
-## Compiler Bahasa Python
+# TubesTBFO
+# Compiler Bahasa Python
 
-# Anggota
-Rahmat Rafid Akbar 13502090 
-Firizky Ardiansyah 13520095 
-Roby Purnomo 13520106 
+## Anggota
+- Rahmat Rafid Akbar 13502090 
+- Firizky Ardiansyah 13520095 
+- Roby Purnomo 13520106 
 
-# Directory
+## Directory
 ```
 ├───src
 │   ├───grammar
@@ -25,7 +25,7 @@ Roby Purnomo 13520106
 └───README.md
 ```
 
-# Cara Menjalankan
+## Cara Menjalankan
 1. Clone repository https://github.com/firizky29/TubesTBFO
 2. Buka cmd dan change directory ke TubesTBFO/
 3. Jalankan python main.py "test/tes.py" (untuk file tes)
