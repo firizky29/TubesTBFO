@@ -20,25 +20,35 @@ def read(filepath: str):
     while(w):
         # string processing
         if(w[0:3]=="\'\'\'"):
-            tmp = w[4:]
+            nl = 0
+            tmp = w[3:]
             while(tmp):
+                if(tmp[0]=='\n'):
+                    nl+=1
                 if(tmp[0:3]=="\'\'\'"):
                     break
                 tmp = tmp[1:]
             if(tmp):
                 if(tmp[0:3]=="\'\'\'"):
+                    for _ in range(nl):
+                        res += 's\n'
                     res += 's'
-                    w = tmp[4:]
+                    w = tmp[2:]
         elif(w[0:3]=="\"\"\""):
-            tmp = w[4:]
+            nl = 0
+            tmp = w[3:]
             while(tmp):
+                if(tmp[0]=='\n'):
+                    nl+=1
                 if(tmp[0:3]=="\"\"\""):
                     break
                 tmp = tmp[1:]
             if(tmp):
                 if(tmp[0:3]=="\"\"\""):
+                    for _ in range(nl):
+                        res += 's\n'
                     res += 's'
-                    w = tmp[4:]
+                    w = tmp[2:]
         elif(w[0]=='\"'):
             tmp = w[1:]
             while(tmp):
@@ -69,13 +79,17 @@ def read(filepath: str):
                 res += w[0]    
         # cek comment
         elif(w[0] == '#'):
+            tmp = w
             w = w[1:]
             while(w):
-                if(w[0]=='/n'):
+                if(w[0]=='\n'):
                     break
+                tmp = w
                 w = w[1:]
             if(not w):
                 break
+            else:
+                w = tmp
         elif(w[0] not in (alp+Alp+num+'_')):
             res += w[0]
         else:

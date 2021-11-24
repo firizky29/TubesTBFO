@@ -52,14 +52,17 @@ if __name__ == "__main__":
     print("\n")
     print(">> Evaluating " + str(fileinput) + "...")
     print()
-
-    x = CYK(inp, CNF)
-    print(">> Hasil Evaluate")
-
-    if x == -1 :
+    if (len(inp)==0):
         print("   Accepted")
         print()
-    else :
-        print("   Syntax Error")
-        print("   " + readLine(fileinput, x))
+    else:
+        x = CYK(inp, CNF)
+        print(">> Hasil Evaluate")
+
+        if x == -1 :
+            print("   Accepted")
+            print()
+        else :
+            print("   Syntax Error")
+            print("   " + readLine(fileinput, x))
     print("===============================================================")

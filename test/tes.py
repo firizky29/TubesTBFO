@@ -1,14 +1,12 @@
-# from x import *
-
-# for i in range(10):
-#     x+=1
-#     pass
-#     raise
-# sajh = 78
-
-print(""""
-Pseudocode, sumber: Wikipedia
-doaijda
-aojaijjsd asjpd
-ajaisj
-""")
+''' This is a sample multiline comment
+'''
+x + 2 = 3
+if x == 0 + 1
+    return 0
+elif x + 4 == 1:
+    else:
+        return 2
+elif x == 32:
+    return 4
+else:
+    return "Doodoo"
