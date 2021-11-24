@@ -3,7 +3,7 @@ def readGrammar(filepath: str):
         with open(filepath, 'r') as f:
             grammar = f.read()
     except Exception as e:
-        print("Caught exception: cannot open file <--- bakal di ganti")
+        print("Caught exception: cannot open file")
         return
     lines = [line.split('->') for line in grammar.split('\n') if (len(line.split('->'))==2)]
     var = [line[0].replace(" ", "") for line in lines]
